@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Happy Valentine's Day — Pop-up Card</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page">
+    <div class="controls">
+      <button id="toggleBtn" aria-expanded="false">Open Card</button>
+      <button id="printBtn">Print</button>
+    </div>
+
+    <section class="card-scene">
+      <div class="card" id="card" aria-live="polite">
+        <!-- front cover -->
+        <div class="cover front">
+          <div class="cover-content">
+            <h1>Happy Valentine's Day</h1>
+            <p class="subtitle">To someone very special</p>
+          </div>
+        </div>
+
+        <!-- inner (back of cover + inside) -->
+        <div class="inside">
+          <div class="inside-left">
+            <!-- left inner panel (could hold a photo/message) -->
+            <div class="message">
+              <p>For you — with all my heart.</p>
+            </div>
+          </div>
+
+          <div class="inside-right">
+            <!-- pop-up mechanism: a heart that scales and lifts -->
+            <div class="popup">
+              <!-- layered hearts using inline SVG for crispness -->
+              <svg class="heart big" viewBox="0 0 32 29" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M23.6 0c-2.7 0-4.9 1.6-6 3.7C16.3 1.6 14.1 0 11.4 0 5.1 0 0 5.4 0 11.9 0 20.3 9.1 25.8 16 29c6.9-3.2 16-8.7 16-17.1C32 5.4 26.9 0 20.6 0z" fill="#ff5f87"/>
+              </svg>
+
+              <svg class="heart med" viewBox="0 0 32 29" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M23.6 0c-2.7 0-4.9 1.6-6 3.7C16.3 1.6 14.1 0 11.4 0 5.1 0 0 5.4 0 11.9 0 20.3 9.1 25.8 16 29c6.9-3.2 16-8.7 16-17.1C32 5.4 26.9 0 20.6 0z" fill="#ff7aa0"/>
+              </svg>
+
+              <svg class="heart small" viewBox="0 0 32 29" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M23.6 0c-2.7 0-4.9 1.6-6 3.7C16.3 1.6 14.1 0 11.4 0 5.1 0 0 5.4 0 11.9 0 20.3 9.1 25.8 16 29c6.9-3.2 16-8.7 16-17.1C32 5.4 26.9 0 20.6 0z" fill="#ff9cc0"/>
+              </svg>
+
+              <div class="confetti" aria-hidden="true"></div>
+            </div>
+
+            <div class="inscription">
+              <h2 class="greeting">Happy Valentine's Day</h2>
+              <p class="note">With love, <strong>Your Name</strong></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <footer class="notes">
+      <small>Click "Open Card" to open and reveal the pop-up heart. Press Escape to close.</small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
